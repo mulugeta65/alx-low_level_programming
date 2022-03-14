@@ -1,45 +1,35 @@
-
-
 #include <stdio.h>
 
-
-
 /**
+ * main - main - two pairs of numbers that do not repeat
  *
- *  * main - Entry point
- *
- *   * Return:0
- *
- *    */
+ * Return (0)
+ */
 
 int main(void)
-
 {
+	int i, j;
 
-		int i, y;
+	for (j = 0; j <= 99; j++)
+	{
+		for (i = j; i <= 99; i++)
+		{
+			if (i != j)
+			{
+				putchar(j / 10 + 48);
+				putchar(j % 10 + 48);
+				putchar(' ');
+				putchar(i / 10 + 48);
+				putchar(i % 10 + 48);
+			}
+			if (j * 100 + i != 9899)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
 
-			for (i = 0; i < 10; i++)
-
-					{
-
-								putchar (i + '0');
-
-									}
-
-				for (y = 'a'; y <= 'f'; y++)
-
-						{
-
-									putchar (y);
-
-										}
-
-
-
-				putchar('\n');
-
-				return (0);
-
+	return (0);
 }
-
-© 2022 GitHub, 
