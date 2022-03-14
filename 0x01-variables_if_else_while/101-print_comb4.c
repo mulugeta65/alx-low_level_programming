@@ -1,45 +1,42 @@
-
-
 #include <stdio.h>
 
-
-
 /**
+ * main - possible combos of 3 digits
  *
- *  * main - Entry point
- *
- *   * Return:0
- *
- *    */
+ * Return (0)
+ */
 
 int main(void)
-
 {
+	int i, j, k;
 
-		int i, y;
+	for (i = 48; i < 58; i++)
+	{
+		for (j = 48; j < 58; j++)
+		{
+			for (k = 48; k < 58; k++)
+			{
+				if (i == j || j == k || i == k)
+				{
+					continue;
+				}
+				putchar(i);
+				putchar(j);
+				putchar(k);
 
-			for (i = 0; i < 10; i++)
+				if (i == 55 && j == 56 && k == 57)
+				{
+					break;
 
-					{
-
-								putchar (i + '0');
-
-									}
-
-				for (y = 'a'; y <= 'f'; y++)
-
-						{
-
-									putchar (y);
-
-										}
-
-
-
-				putchar('\n');
-
-				return (0);
-
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+		putchar('\n');
+		return (0);
+	}
 }
-
-© 2022 GitHub, 
