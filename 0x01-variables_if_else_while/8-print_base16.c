@@ -5,21 +5,25 @@
  * main - Entry point
  * Return:0
  */
+
 int main(void)
 {
-	
-	int i, y;
-	
-	for (i = 0; i < 10; i++)
+	char d = '0';
+
+	while (d <= '9')
 	{
-		putchar (i + '0');
-	}
-	
-	for (y = 'a'; y <= 'f'; y++)
-	{
-		putchar (y);
+		putchar(d);
+		d++;
 	}
 
-putchar('\n');
-return (0);
+	char c = 'a';
+
+	while (c <= 'f')
+	{
+		putchar(c);
+		c++;
+	}
+
+	putchar('\n');
+	return (0);
 }
